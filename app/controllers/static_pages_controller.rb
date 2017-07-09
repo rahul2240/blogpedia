@@ -6,7 +6,8 @@ class StaticPagesController < ApplicationController
   # GET /posts
   # GET /posts.json
   def home
-    @posts = Post.all
+    @posts = Post.most_recent
+    @users = User.all
   end
 
   # GET /posts/1
