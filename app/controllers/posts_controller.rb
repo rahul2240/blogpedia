@@ -74,7 +74,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title,:description,:banner_image,:user_id)
+      params.require(:post).permit(:title,:description,:banner_image)
     end
 
     # Confirms a logged-in user.
@@ -85,10 +85,6 @@ class PostsController < ApplicationController
       end
     end
 
-    def correct_user
-      @post = current_user.posts.find_by(id: params[:id])
-      redirect_to root_url if @micropost.nil?
-    end
-
+   
     
 end
