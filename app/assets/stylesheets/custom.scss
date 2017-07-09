@@ -1,2 +1,30 @@
-@import 'bootstrap-sprockets'
-@import 'bootstrap'
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+footer{
+	margin-top: 50px;
+	border-top: 0.5px solid lightgrey;
+	padding-top: 5px;
+	small{
+		float: left;
+		a{
+			text-decoration: none !important;
+			color: grey;
+		}
+	}
+	ul {
+		list-style: none;
+		float: right;
+		li {
+			float: left;
+			margin-left: 15px;
+			a{
+				text-decoration: none !important;
+				color: grey;
+			}
+		}
+	}
+
+
+}
+
