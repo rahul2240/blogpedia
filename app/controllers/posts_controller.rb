@@ -10,8 +10,11 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.most_recent
-  
+    @User = User.all
+    
   end
+
+
 
   # GET /posts/1
   # GET /posts/1.json
@@ -34,11 +37,13 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        flash[:success] = 'Blog created!'
+        format.html { redirect_to @post }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
+
       end
     end
   end
@@ -48,7 +53,8 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        flash[:success] = 'Post is successfully updated'
+        format.html { redirect_to @post }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -62,7 +68,8 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      flash[:success] = 'Post is successfully destroyed'
+      format.html { redirect_to posts_url }
       format.json { head :no_content }
     end
   end
@@ -81,7 +88,7 @@ class PostsController < ApplicationController
     # Confirms a logged-in user.
     def logged_in_user
       unless logged_in?
-     
+        flash[:danger] = 'Login in first'
         redirect_to login_url
       end
     end
@@ -89,7 +96,11 @@ class PostsController < ApplicationController
     def correct_user
         @post = Post.friendly.find(params[:id])
         @user = User.find_by(id: @post.user_id)
-        redirect_to posts_path unless current_user?(@user)
+         unless current_user?(@user)
+          flash[:danger] = 'This is not your post'
+          redirect_to posts_path
+          
+         end
       
     end
     
