@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20170709144601) do
     t.datetime "updated_at", null: false
     t.string "banner_image"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
-    t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
