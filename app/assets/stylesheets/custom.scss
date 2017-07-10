@@ -5,11 +5,17 @@ footer{
 	margin-top: 50px;
 	border-top: 0.5px solid lightgrey;
 	padding-top: 5px;
+
 	small{
 		float: left;
+		font-size: 16px !important;
 		a{
 			text-decoration: none !important;
-			color: grey;
+			color: white !important;
+			&:hover{
+				background-color: transparent;
+				color: black !important; 
+			}
 		}
 	}
 	ul {
@@ -18,9 +24,18 @@ footer{
 		li {
 			float: left;
 			margin-left: 15px;
-			a{
+			a{	font-size: 16px !important;
 				text-decoration: none !important;
-				color: grey;
+				color: white !important;
+				&:hover{
+					text-decoration: none;
+
+				background-color: transparent;
+				color: black !important; 
+			
+					
+					
+				}
 			}
 		}
 	}
@@ -38,3 +53,48 @@ footer{
     margin-left: auto;
     margin-right: auto;
  }
+
+ #logo {
+ 	margin-left: 40px;
+ 	letter-spacing: -0.6px;
+ 	font-size: 25px;
+ 	color: white;
+ }
+
+ .navbar-right{
+ 	margin-right: 20px;
+ }
+
+.caption{
+	a{
+		text-decoration: none;
+		&:hover{
+			text-decoration: none;
+			background-color: transparent;
+					color: black;
+		}
+	}
+}
+
+body{
+	background-image: url("https://images.pexels.com/photos/356093/pexels-photo-356093.jpeg?h=350&auto=compress&cs=tinysrgb");
+
+	background-size: 100%;
+}
+
+.navbar{
+	background-color: black;
+}
+.thumbnail{
+	background-image: url("https://www.planwallpaper.com/static/cache/5b/0f/5b0ff8ad314a77feb59d9ea204078058.jpg");
+
+	.caption{
+		color: white !important;
+		h3{
+			a{
+			color: black !important;
+				}
+		}
+	}
+
+}
