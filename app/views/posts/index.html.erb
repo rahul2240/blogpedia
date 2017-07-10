@@ -3,7 +3,7 @@
 <p id="notice"><%= notice %></p>
 
   <p style="text-align: center;">
-  <%= link_to 'New', new_post_path, class: 'btn btn-success form-control', style: 'color: white' %>
+  <%= link_to 'New Blog', new_post_path, class: 'btn btn-success', style: 'color: white; width: 40%' %>
   </p> 
 <% @posts.each do |post| %>
 <% user = User.find_by(id: post.user_id) %>

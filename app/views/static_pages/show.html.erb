@@ -1,27 +1,35 @@
 <div class="row" >
 <div class="col-md-10 col-md-offset-1">
 
+<br><br>
 
-
-<%= image_tag @post.banner_image, class: 'img-rounded center' %>
+<%= image_tag @post.banner_image, class: 'img-rounded center',style: 'border: 2px solid black;' %>
 
 
 <br><br>
-
-<h3>
-  
-  <%= @post.title.capitalize %>
+<div class= "box" style="background: rgba(0, 0, 0, .5); width: 100%;">
+<br>
+<h3 style= 'color: white; text-align: center;'>
+  <b>
+  <%= @post.title.capitalize  %>
+  </b>
 </h3>
 <br><br>
-<p>
+<p style="font-size: 16px; color: white; padding-left: 10px;">
  
   <%= @post.description.gsub(/\n/, '<br>').html_safe %>
 </p>
+
+
+
+
 
 
 <p style="text-align: center;">
 
 <%= link_to 'Back', root_path ,class: 'btn btn-warning btn-lg'  %>
 </p>
+<br>
+</div>
 </div>
 </div>
