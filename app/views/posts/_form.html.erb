@@ -27,9 +27,14 @@
     <%= form.text_area :description, id: :post_description,class: "form-control" %>
   </div>
 
+   <div class="hidden field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, value: current_user.id ,class: "form-control" %>
+  </div>
+  
   
 
   <div class="actions">
-    <%= form.submit 'Post', class: 'btn btn-default' %>
+    <%= form.submit 'Post', class: 'btn btn-info form-control' %>
   </div>
 <% end %>
