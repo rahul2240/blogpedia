@@ -1,6 +1,10 @@
 
 <div class="row">
 <p id="notice"><%= notice %></p>
+
+  <p style="text-align: center;">
+  <%= link_to 'New', new_post_path, class: 'btn btn-success form-control', style: 'color: white' %>
+  </p> 
 <% @posts.each do |post| %>
 <% user = User.find_by(id: post.user_id) %>
 <div class="col-md-4">
@@ -17,7 +21,3 @@
   </div>
   <% end %>
   </div>
-
-  <p style="text-align: center;">
-  <%= link_to 'New', new_post_path, class: 'btn btn-success btn-lg' %>
-  </p> 
