@@ -15,3 +15,16 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+
+document.addEventListener("turbolinks:load", function() {
+  tinymce.remove();
+  tinymce.init({ 
+  	selector:'textarea',
+  	plugins: "codesample textcolor emoticons image media mediaembed",
+  	
+    toolbar: "codesample forecolor backcolor emoticons image",
+    mediaembed_max_width: 450
+
+   });
+})

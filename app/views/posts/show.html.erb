@@ -7,7 +7,7 @@
 
 
 <br><br>
-<div class= "box" style="background: rgba(0, 0, 0, .5); width: 100%;">
+<div class= "box" style="background: rgba(254, 254, 220, .4); width: 100%;">
 <br>
 <h3 style= 'color: white; text-align: center;'>
   <b>
@@ -15,10 +15,10 @@
   </b>
 </h3>
 <br><br>
-<p style="font-size: 16px; color: white; padding-left: 10px;">
+<div style="color: white !important; margin-left: 10px;">
  
-  <%= @post.description.gsub(/\n/, '<br>').html_safe %>
-</p>
+  <%= @post.description.html_safe %>
+</div>
 
 <br><br><br>
 <p style="text-align: center;">

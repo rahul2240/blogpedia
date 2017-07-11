@@ -12,30 +12,37 @@
     </div>
   <% end %>
 <br>
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :post_title,class: "form-control" %>
-  </div>
-<br>
-   <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :banner_image, id: :post_banner_image,class: "form-control" %>
-  </div>
-<br>
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :post_description,class: "form-control" %>
-  </div>
+<div class="row">
+<div class=" col-md-4">
+      <div class="field">
+        <%= form.label :title %>
+        <%= form.text_field :title, id: :post_title,class: "form-control" %>
+      </div>
+    <br>
+       <div class="field">
+        <%= form.label :image_url %>
+        <%= form.text_field :banner_image, id: :post_banner_image,class: "form-control" %>
+      </div>
+    <br>
+       <div class="hidden field">
+        <%= form.label :user_id %>
+        <%= form.text_field :user_id, value: current_user.id ,class: "form-control" %>
+      </div>
+      <br>
+      <br>
+      <div class="actions">
+        <%= form.submit 'Post', class: 'btn btn-info form-control' %>
+      </div>
 
-   <div class="hidden field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, value: current_user.id ,class: "form-control" %>
-  </div>
-  
-  <br>
+      </div>
+  <div class="col-md-8">
 
-  <div class="actions">
-    <%= form.submit 'Post', class: 'btn btn-info form-control' %>
-  </div>
-  <br>
+      <div class="field">
+        <%= form.label :description %>
+        <%= form.text_area :description, id: :post_description,class: "form-control" %>
+      </div>
+
+  </div>    
+     
+</div>
 <% end %>
