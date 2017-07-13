@@ -1,4 +1,6 @@
-<footer class="footer">
+<%
+=begin %>
+<footer class="footer navbar-bottom">
 <div class="container-fluid">
 <div class="row">
 
@@ -13,3 +15,23 @@
 </div>
 </div>
 </footer>
+<%
+=end %>
+
+ <nav class="footer navbar navbar-bottom ">
+  <div class="container-fluid">
+  
+    <ul class="nav navbar-nav l">
+    
+    <li>  <b><%= link_to '© Nibble Computer Society', "http://www.hackncs.com/" %></b></li>
+    </ul>
+   
+    <ul class="nav navbar-nav navbar-right r">
+      <li><b><%= link_to 'Tip Us', tip_path %></b></li>
+	<li><b><%= link_to 'About', about_path %></b></li>
+	<li><b><%= link_to 'Contact', contact_path%> </b></li>
+    </ul>
+    
+   
+  </div>
+</nav> 

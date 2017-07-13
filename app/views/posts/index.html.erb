@@ -10,7 +10,10 @@
 <div class="col-md-6 col-lg-6  ">
     <div class="thumbnail">
       
-        <%= image_tag post.banner_image, class: 'img-rounded',style: "height: 250px; width: 100%;"  %>
+        
+<img src= "<%= post.banner_image%>" alt="Image not found" onerror="this.onerror=null;this.src='https://images.pexels.com/photos/163114/mario-luigi-figures-funny-163114.jpeg?h=350&auto=compress&cs=tinysrgb';", class= 'img-rounded center',style = 'border: 2px solid black;' %>
+
+
         <div class="caption", style = "overflow: auto; height: 90px;" >
          <h3><%= link_to post.title.capitalize, post %></h3>
          <small>Published on: <%= post.created_at.strftime("%-b %-d, %Y") %> </small>

@@ -3,15 +3,14 @@
 
 
 
-footer{
-	margin-top: 50px;
-	border-top: 0.5px solid lightgrey;
-	padding-top: 5px;
+ .footer{
+	margin-top: 50px  !important;
+	border-top: 0.5px solid lightgrey  !important;
+	padding-top: 5px  !important;
 
-	small{
-		float: left;
-		font-size: 16px !important;
-		a{
+	.l {
+		li{
+			a{ font-size: 16px;
 			text-decoration: none !important;
 			color: white !important;
 			&:hover{
@@ -19,12 +18,17 @@ footer{
 				color: black !important; 
 			}
 		}
+		}
 	}
-	ul {
+		
+
+
+	
+	.r {
 		list-style: none;
-		float: right;
+		
 		li {
-			float: left;
+			
 			margin-left: 15px;
 			a{	font-size: 16px !important;
 				text-decoration: none !important;
@@ -44,6 +48,13 @@ footer{
 
 
 }
+
+
+
+
+
+
+
 
 
 .container{
@@ -84,7 +95,7 @@ body{
 	background-size: 100%;
 }
 
-.navbar{
+.navbar-inverse{
 	background-color: black;
 }
 .thumbnail{
